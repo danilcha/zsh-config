@@ -56,7 +56,7 @@ function precmd()
 ARROW_RIGHT=$'\uE0B0'
 BG=237
 
-PROMPT='%K{$BG}%(?..%F{196}✘ %f)%(!.%F{214}.%F{107})%n@%m%f ${DIR_WRITABLE}%~ %k%F{$BG}$ARROW_RIGHT%f '
+PROMPT='%K{$BG}[%(?..%F{196}✘ %f)%(!.%F{214}.%F{107})%n@%m%f ${DIR_WRITABLE}%~ %f]%#%k '
 setopt prompt_subst
 
 
