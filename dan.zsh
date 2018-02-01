@@ -32,6 +32,7 @@ fi
 #ZDOTDIR="$HOME/.antigen" # because antigen tries to put files into its directory, and prezto into $ZDOTDIR
 source "$ZPREZTODIR/runcoms/zprofile"
 source "$ZPREZTODIR/init.zsh"
+source "$ZPREZTODIR/runcoms/zlogin"
 #HISTFILE="$HOME/.history" # we redefined ZDOTDIR but want history to be in the home dir
 
 ################# PREZTO OVERRIDE #################
