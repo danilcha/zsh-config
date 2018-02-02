@@ -1,3 +1,2 @@
-*
-!dan.zsh
-!.gitignore
+/prezto
+.DS_Store
