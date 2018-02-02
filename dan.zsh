@@ -9,6 +9,7 @@ zstyle ':prezto:load' pmodule   \
     'history'                   \
     'directory'                 \
     'utility'                   \
+    'osx'                       \
     'completion'                \
     'syntax-highlighting'       \
     'history-substring-search'
@@ -16,6 +17,32 @@ zstyle ':prezto:load' pmodule   \
 
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 
+# Auto convert .... to ../..
+zstyle ':prezto:module:editor' dot-expansion 'yes'
+
+
+# By default, only the main highlighter is enabled.
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'brackets' \
+   'pattern' \
+#   'line' \
+#   'cursor' \
+#   'root'
+
+# Set syntax highlighting styles.
+#zstyle ':prezto:module:syntax-highlighting' styles \
+#  'builtin' 'bg=blue' \
+#  'command' 'bg=blue' \
+#  'function' 'bg=blue'
+
+# Set syntax pattern styles.
+zstyle ':prezto:module:syntax-highlighting' pattern \
+  'rm*-[rR]f*' 'fg=white,bg=red,bold'
+
+
+# Auto set the tab and window titles.
+zstyle ':prezto:module:terminal' auto-title 'yes'
 
 
 ################# PREZTO LAUNCH #################
@@ -55,8 +82,7 @@ function precmd()
 
 ARROW_RIGHT=$'\uE0B0'
 BG=237
-
-PROMPT='%K{$BG}[%(?..%F{196}✘ %f)%(!.%F{214}.%F{107})%n@%m%f ${DIR_WRITABLE}%~ %f]%#%k '
+PROMPT='%K{$BG}%(?..%F{196}✘ %f)%(!.%F{214}.%F{107})%n@%m%f ${DIR_WRITABLE}%~ %F{248}%(!.#.$)%k%f ' # 
 setopt prompt_subst
 
 
