@@ -65,6 +65,7 @@ source "$ZPREZTODIR/runcoms/zlogin"
 ################# PREZTO OVERRIDE #################
 
 unsetopt COMPLETE_IN_WORD
+unsetopt correct
 
 ################# MY PROMPT #################
 
