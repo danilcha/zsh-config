@@ -31,7 +31,8 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 #   'root'
 
 # Set syntax highlighting styles.
-#zstyle ':prezto:module:syntax-highlighting' styles \
+zstyle ':prezto:module:syntax-highlighting' styles \
+	'globbing' 'fg=blue,bold' # by default it's dark blue
 #  'builtin' 'bg=blue' \
 #  'command' 'bg=blue' \
 #  'function' 'bg=blue'
@@ -54,7 +55,7 @@ if [[ ! -d "$ZPREZTODIR" ]]
 then
     echo Cloning Prezto
     git clone -q --recursive "https://github.com/sorin-ionescu/prezto.git" "$ZPREZTODIR"
-fi	
+fi
 
 #ZDOTDIR="$HOME/.antigen" # because antigen tries to put files into its directory, and prezto into $ZDOTDIR
 source "$ZPREZTODIR/runcoms/zprofile"
@@ -83,7 +84,7 @@ function precmd()
 
 ARROW_RIGHT=$'\uE0B0'
 BG=237
-PROMPT='%K{$BG}%(?..%F{196}✘ %f)%(!.%F{214}.%F{107})%n@%m%f ${DIR_WRITABLE}%~ %F{248}%(!.#.$)%k%f ' # 
+PROMPT='%K{$BG}%(?..%F{196}✘ %f)%(!.%F{214}.%F{107})%n@%m%f ${DIR_WRITABLE}%~ %F{248}%(!.#.$)%k%f ' #
 setopt prompt_subst
 
 
