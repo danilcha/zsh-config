@@ -93,5 +93,7 @@ alias mmv='noglob zmv -W'
 
 
 # Prezto bug -- substring search binding work on Mac but not on Linux, a workaround untill they fir it
-bindkey -M "$keymap" "$key_info[Up]" history-substring-search-up
-bindkey -M "$keymap" "$key_info[Down]" history-substring-search-down
+for keymap in 'emacs' 'viins'; do
+    bindkey -M "$keymap" "$key_info[Up]" history-substring-search-up
+    bindkey -M "$keymap" "$key_info[Down]" history-substring-search-down
+done
