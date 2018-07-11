@@ -90,7 +90,7 @@ setopt prompt_subst
 
 
 autoload -U zmv
-alias mmv='noglob zmv -W'
+alias zmv='noglob zmv -W'
 
 
 
